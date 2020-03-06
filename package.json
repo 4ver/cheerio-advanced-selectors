@@ -41,5 +41,8 @@
   "coordinates": [
     55.777579,
     12.589928
-  ]
+  ],
+  "dependencies": {
+    "inherits": "^2.0.4"
+  }
 }

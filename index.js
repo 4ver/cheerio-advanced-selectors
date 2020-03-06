@@ -1,6 +1,6 @@
 'use strict'
 
-var util = require('util')
+var util = require('inherits')
 
 var splitter = /^(.*?)(?::(eq|(?:(?:first|last)(?!-child)))(?:\((\d+)\))?)(.*)/
 
@@ -17,7 +17,7 @@ exports.wrap = function (Cheerio) {
     return Cheerio.apply(Cheerio, arguments)
   }
 
-  util.inherits(CheerioAdv, Cheerio)
+  inherits(CheerioAdv, Cheerio)
 
   CheerioAdv.load = function () {
     var $ = Cheerio.load.apply(Cheerio, arguments)
